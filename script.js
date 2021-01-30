@@ -42,7 +42,7 @@ function changeDisplayProperty(hidingElementId, property) {
 }
 // cofiramation function
 function confirmation() {
-    if (document.getElementById('total').innerText == '$00') {
+    if (document.getElementById('total').innerText == '$0') {
         alert('To confirm booking you have to add at least one ticket');
         changeDisplayProperty('book-now-button', 'block');
         changeDisplayProperty('confirmation-section', 'none');
