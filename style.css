@@ -127,3 +127,30 @@ a.active {
   width: 16px;
   margin: 0px 1px;
 }
+#confirmation-section {
+  display: none;
+}
+.confirmation-section-button {
+  width: 35%;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: larger;
+  font-weight: 500;
+  margin: 0px 15px;
+}
+#confirm-button {
+  background-color: #4caf50;
+}
+#cancle-button {
+  background-color: #ffd633;
+}
+#confirmation-message {
+  display: none;
+  background-color: #33cc33;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bolder;
+  color: white;
+}

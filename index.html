@@ -37,7 +37,7 @@
 
         <div class="booking-form">
             <h3>Explore By Bus</h3>
-
+<div id="form-detail-section">
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">From</label>
@@ -52,18 +52,18 @@
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                    <input class="inp-style" id="departure-date" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                    <input class="inp-style" id="return-date" type="date" name="">
                 </div>
             </div>
             <div class="inputs">
                 <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" min="0" value="0" name="" id="first-class-current-ticket-count">
+                    <input class="inp-style inp-width" type="number" min="0" value="0" name="" id="first-class-current-ticket-count" oninput="updateBillSection()">
                 </div>
                 <div class="plus-minus-btn">
                     <p>
@@ -75,7 +75,7 @@
                 <div class="input-group f-class">
                     <div>
                         <label for="">Economy ($100)</label>
-                        <input class="inp-style inp-width" type="number" min="0" value="0" name="" id="economy-current-ticket-count">
+                        <input class="inp-style inp-width" type="number" min="0" value="0" name="" id="economy-current-ticket-count"  oninput="updateBillSection()">
                     </div>
                     <div class="plus-minus-btn">
                         <p>
@@ -86,6 +86,7 @@
                 </div>
 
             </div>
+        </div>
             <div class="calculations">
                 <div class="amount">
                     <div class="left">
@@ -114,7 +115,15 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button class="btn-style" id="book-now-button" onclick="changeDisplayProperty('book-now-button','none') ,changeDisplayProperty('confirmation-section','block')">Book Now</button>
+            <div id="confirmation-section">
+                <button class="confirmation-section-button" id="confirm-button" onclick="confirmation()">Confirm</button>
+                <button class="confirmation-section-button" id="cancle-button" onclick="changeDisplayProperty('book-now-button','block'), changeDisplayProperty('confirmation-section','none')">Cancle</button>
+            </div>
+                <div id="confirmation-message">
+                    <p>Your Booking is confirmed</p>
+                    <span id="booking-id"></span>
+                </div>
         </div>
     </main>
 <script src="script.js"></script>
