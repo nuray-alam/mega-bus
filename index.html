@@ -44,8 +44,8 @@
                     <input class="inp-style" type="text" name="" placeholder="Dhaka">
                 </div>
                 <div class="input-group">
-                    <label" for="">From</label>
-                    <input class="inp-style" type="text" name="" placeholder="Chittagone">
+                    <label" for="">To</label>
+                    <input class="inp-style" type="text" name="" placeholder="Chittagong">
                 </div>
             </div>
 
@@ -63,19 +63,25 @@
                 <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input class="inp-style inp-width" type="number" min="0" value="0" name="" id="first-class-current-ticket-count">
                 </div>
                 <div class="plus-minus-btn">
-                    <p>+ -</p>
+                    <p>
+                        <img src="images/plus.png" alt="" class="plus-button" onclick="changeTicketCounts('first-class-current-ticket-count',true)">
+                        <img src="images/minus.png" alt="" class="minus-sign" onclick="changeTicketCounts('first-class-current-ticket-count',false)">
+                    </p>
                 </div>
             </div>
                 <div class="input-group f-class">
                     <div>
                         <label for="">Economy ($100)</label>
-                        <input class="inp-style inp-width" type="number" name="">
+                        <input class="inp-style inp-width" type="number" min="0" value="0" name="" id="economy-current-ticket-count">
                     </div>
                     <div class="plus-minus-btn">
-                        <p> <span>+</span> <span>-</span> </p>
+                        <p>
+                            <img src="images/plus.png" alt="" class="plus-button" onclick="changeTicketCounts('economy-current-ticket-count',true)">
+                            <img src="images/minus.png" alt="" class="minus-sign" onclick="changeTicketCounts('economy-current-ticket-count',false)">
+                        </p>
                     </div>
                 </div>
 
@@ -86,7 +92,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p id="subTotal">$00</p>
                     </div>
                 </div>
 
@@ -95,7 +101,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p id="vat">$00</p>
                     </div>
                 </div>
                 <hr>
@@ -104,14 +110,14 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p id="total">$00</p>
                     </div>
                 </div>
             </div>
             <button class="btn-style">Book Now</button>
         </div>
     </main>
-
+<script src="script.js"></script>
     <!--Thank You-->
 </body>
 
